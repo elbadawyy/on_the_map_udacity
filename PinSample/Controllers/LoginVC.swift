@@ -22,8 +22,6 @@ class LoginVC: UIViewController{
         
     }
     @IBAction func login(_ sender: Any) {
-        emailTextField.text="muhammadelbadawy10@gmail.com"
-        passwordTextField.text="qazxcdews"
         // Try to login with Udacity API
         UdacityClient.shared.postSession(email: emailTextField.text!, password: passwordTextField.text!) { (result,error: String?) in
             
