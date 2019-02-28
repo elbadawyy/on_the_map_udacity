@@ -18,6 +18,7 @@
 		14AA2A872227272F00C06772 /* SubmitExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA2A862227272F00C06772 /* SubmitExtention.swift */; };
 		14AA2A8922272C0B00C06772 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA2A8822272C0B00C06772 /* LoginExtension.swift */; };
 		14AA2A8B22273EB200C06772 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA2A8A22273EB200C06772 /* TabBarVC.swift */; };
+		14B17C9622285B8300B94000 /* CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B17C9522285B8300B94000 /* CommonExtension.swift */; };
 		4DFABCE81AC0CBAC00D21C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFABCE71AC0CBAC00D21C43 /* AppDelegate.swift */; };
 		4DFABCEA1AC0CBAC00D21C43 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFABCE91AC0CBAC00D21C43 /* MapVC.swift */; };
 		4DFABCED1AC0CBAC00D21C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFABCEB1AC0CBAC00D21C43 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		14AA2A862227272F00C06772 /* SubmitExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitExtention.swift; sourceTree = "<group>"; };
 		14AA2A8822272C0B00C06772 /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
 		14AA2A8A22273EB200C06772 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		14B17C9522285B8300B94000 /* CommonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtension.swift; sourceTree = "<group>"; };
 		4DFABCE21AC0CBAC00D21C43 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFABCE61AC0CBAC00D21C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DFABCE71AC0CBAC00D21C43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				14AA2A862227272F00C06772 /* SubmitExtention.swift */,
 				14AA2A8822272C0B00C06772 /* LoginExtension.swift */,
+				14B17C9522285B8300B94000 /* CommonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B17C9622285B8300B94000 /* CommonExtension.swift in Sources */,
 				14AA2A872227272F00C06772 /* SubmitExtention.swift in Sources */,
 				143AEFBF2225B8AC00DE1314 /* SubmitVC.swift in Sources */,
 				4DFABCEA1AC0CBAC00D21C43 /* MapVC.swift in Sources */,

@@ -155,7 +155,14 @@
                                 <action selector="showPinView:" destination="ydf-sf-Y4P" id="Gdq-gB-UaD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="refrech" image="icon_refresh" id="Hwv-HV-OgL"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="refrech" image="icon_refresh" id="Hwv-HV-OgL"/>
+                            <barButtonItem title="logout" id="lAS-Xr-FjK">
+                                <connections>
+                                    <action selector="logout:" destination="ydf-sf-Y4P" id="kft-Me-6a6"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jPH-6s-fU7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>

@@ -5,17 +5,6 @@
 //  Created by Muhammad El-Badawy on 2/17/19.
 //  Copyright © 2019 Udacity. All rights reserved.
 //
-
-import Foundation
-
-//
-//  ApiHelper.swift
-//  OnTheMap
-//
-//  Created by Muhammad El-Badawy on 2/17/19.
-//  Copyright © 2019 Udacity. All rights reserved.
-//
-
 import Foundation
 class CommonClient{
     

@@ -22,7 +22,8 @@ import MapKit
 */
 
 class MapVC: UIViewController, MKMapViewDelegate {
-    
+    var annotations = [MKPointAnnotation]()
+
     // The map. See the setup in the Storyboard file. Note particularly that the view controller
     // is set up as the map view's delegate.
     @IBOutlet weak var mapView: MKMapView!
@@ -35,6 +36,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
         ParseClient.shared.getAllStudents { (items , error) in
             print("yes =>",items![0].firstName!)
             ShardData.shared.students=items as! [StudentStruct]
+            self.showPins()
         }
         
        
@@ -46,7 +48,6 @@ class MapVC: UIViewController, MKMapViewDelegate {
         
         // We will create an MKPointAnnotation for each dictionary in "locations". The
         // point annotations will be stored in this array, and then provided to the map view.
-        var annotations = [MKPointAnnotation]()
         
         
         for student in  ShardData.shared.students {
@@ -128,6 +129,17 @@ class MapVC: UIViewController, MKMapViewDelegate {
             }
         }
     }
+    func showPins(){
+        for student in ShardData.shared.students {
+            let lat = CLLocationDegrees(student.latitude!)
+            let long = CLLocationDegrees(student.longitude!)
+            let location = MKPointAnnotation()
+            location.title = student.firstName!+" "+student.lastName!
+            location.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            location.subtitle = student.mediaUrl
+            self.annotations.append(location)
+        }
+    }
 //    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 //        
 //        if control == annotationView.rightCalloutAccessoryView {
@@ -205,4 +217,6 @@ class MapVC: UIViewController, MKMapViewDelegate {
 //            ]
 //        ]
 //    }
+    
+   
 }

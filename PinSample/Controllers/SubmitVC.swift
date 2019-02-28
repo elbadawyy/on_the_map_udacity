@@ -128,7 +128,12 @@ class SubmitVC: UIViewController{
     }
     
     func saveHandler(response:String?) -> Void{
-    
+        guard response == nil else {
+            self.showErrorAlert(message: response!)
+            self.dismiss(animated: true, completion: nil)
+
+            return
+        }
     }
 
 }

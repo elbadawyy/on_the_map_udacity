@@ -90,7 +90,8 @@ class ParseClient:CommonClient{
     func getAllStudents(handler: @escaping (_ students: [StudentStruct]?, _ error: String?) -> Void) {
         let params = [
             "limit":"100",
-            "skip":"400"
+            "skip":"400",
+            "order":"createdAt"
         ]as [String : AnyObject]
         
         // prepare request

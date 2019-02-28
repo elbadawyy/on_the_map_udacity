@@ -21,14 +21,17 @@ class LoginVC: UIViewController{
         passwordTextField.delegate=self
         
     }
+    
     @IBAction func login(_ sender: Any) {
+        if (self.emailTextField.text?.isEmpty)! || (self.passwordTextField.text?.isEmpty)! {
+            showErrorAlert(message: "please fill all required fields")
+        }
         // Try to login with Udacity API
         UdacityClient.shared.postSession(email: emailTextField.text!, password: passwordTextField.text!) { (result,error: String?) in
             
             DispatchQueue.main.async {
                 guard error == nil else {
-//                    self.showErrorAlert(error!)
-                    print("error",error!)
+                    self.showErrorAlert(message: error!)
                    return
                 }
                 

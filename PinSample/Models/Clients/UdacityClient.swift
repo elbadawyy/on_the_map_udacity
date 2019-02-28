@@ -55,6 +55,31 @@ class UdacityClient:CommonClient{
         
     }
     
+    func logout(handler: @escaping (_ error: String?) -> Void){
+        let request = prepareRequest(url: "\(url)session", headers: self.headers, method: "DELETE")
+        for cookie in HTTPCookieStorage.shared.cookies! where cookie.name == "XSRF-TOKEN" {
+            request.setValue(cookie.value, forHTTPHeaderField: "X-XSRF-TOKEN")
+        }
+        
+        processResuest(request: request) { (result, error) -> Void in
+            guard error == nil else {
+                handler(error)
+                return
+            }
+            
+            guard let session = result!["session"] as? [String : AnyObject], let sessionId = session["id"] as? String else {
+                print("Can't find session")
+                handler("Can't find session")
+                return
+            }
+            
+            self.sessionId = sessionId
+            self.userId = ""
+            handler(nil)
+        }
+        
+    }
+    
     func getUser(id: String, handler: @escaping (_ user: [String : AnyObject]?, _ error: String?) -> Void) {
         
         let request = prepareRequest(url: "\(self.url)users/\(id)", headers: self.headers, method: "GET")

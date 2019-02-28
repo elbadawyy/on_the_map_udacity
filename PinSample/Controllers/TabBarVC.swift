@@ -36,10 +36,12 @@ class TabBarVC:UITabBarController {
             }
         }
         
-        
-        
-   
-        
+    }
+    
+    
+    @IBAction func logout(_ sender: Any) {
+        UdacityClient.shared.logout { (error) -> Void in }
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
